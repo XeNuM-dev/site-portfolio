@@ -1,0 +1,423 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    background-color: #fff;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .7s ease;
+    transition: all .7s ease;
+}
+
+body.switchMode {
+    background-color: #000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.header_head {
+    position: relative;
+    background-color: #191819;
+    width: 100%;
+}
+
+/*body.switchMode .header_head {
+    background-color: #f83b3a;
+}*/
+
+.head_inner {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+body.switchMode .head_inner nav ul li a {
+    color: white;
+}
+
+.head_inner .logo {
+    font-weight: bold;
+    font-size: 18px;
+    color: #ccc;
+}
+
+body.switchMode .head_inner .logo {
+    color: white;
+}
+
+.head_inner nav ul {
+    margin: 0;
+    padding: 0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+.head_inner nav ul li {
+    list-style-type: none;
+}
+
+.head_inner nav ul li a {
+    font-size: 14px;
+    color: #ccc;
+    display: inline-block;
+    padding: 20px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.head_inner nav ul li.switch a {
+    position: relative;
+    width: 45px;
+    height: 24px;
+    border: 1px solid #ccc;
+    border-radius: 10em;
+    padding: 0;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.head_inner nav ul li.switch a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 10em;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+body.switchMode .head_inner nav ul li.switch a:after {
+    left: 20px;
+}
+
+.header_body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 150px;
+}
+
+.header_body_inner {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-evenly;
+    -ms-align-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header_body_inner .left .title {
+    color: #333;
+    font-size: 46px;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    width: 315px;
+}
+
+body.switchMode .header_body_inner .left .title {
+    color: #fff;
+}
+
+.header_body_inner .left .title span {
+    color: #f83b3a;
+}
+
+a.btn {
+    display: inline-block;
+    background-color: #f83b3a;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.header_body_inner .right img {
+    border-radius: 30%;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.right {
+    width: 650px;
+}
+
+section {
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    height: 560px;
+    margin-top: 0;
+}
+
+.section_title {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #333;
+}
+
+#about {
+    margin-top: 100px;
+    min-width: 640px;
+}
+
+#contacts {
+    margin-top: 100px;
+    min-width: 640px;
+    height: 460px;
+}
+
+#portfolio {
+    height: 100%;
+    min-width: 640px;
+}
+
+body.switchMode .section_title {
+    color: #f83b3a;;
+}
+
+.about_text {
+    margin-top: 45px;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+body.switchMode .about_text {
+    color: #fff;
+}
+
+.about_text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+footer {
+    position: relative;
+    padding: 20px 0;
+    background-color: #181918;
+}
+
+/*body.switchMode footer {
+    background-color: #f83b3a;
+}*/
+
+footer p {
+    text-align: center;
+    color: #ccc;
+}
+
+body.switchMode footer p {
+    color: white;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  .container-img {
+    position: relative;
+    margin-top: 20px;
+  }
+
+  .row {
+      margin-top: 5px;
+  }
+
+  /* Style all font awesome icons */
+.fa {
+    padding: 10px;
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+
+.fa-instagram {
+    background: #ec0349;
+    color: white;
+}
+
+
+.fa-vk {
+    background: #55ACEE;
+    color: white;
+}
+
+.icons a img {
+    width: 60px;
+    height: 60px;
+}
+
+.icons a img:hover {
+    opacity: 0.7;
+}
+
+.icons {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.icons a {
+    margin-right: 30px;
+}
+
+img {
+    margin: 0;
+}
+
+.container-contacts {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 300px;
+}
+
+.mySlides a .see {
+    margin-bottom: 10px;
+}
+
+body.switchMode .mail {
+    color: white;
+}
+
+.mail {
+    margin-top: 50px;
+}
+
+.git {
+    margin-top: 20px;
+}
+
+body.switchMode .git {
+    color: white;
+}
+
+.git a {
+    text-decoration: none;
+}
+
+body.switchMode .git a {
+    color: yellow;
+}
